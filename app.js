@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const location = req.body.location ? req.body.location : "Purnia";
-  const appId = "832b719b7d7c526512782c9b2c3d3c74";
+  const appId = "your api key";
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + appId + "&units=metric&lang={ca} ";
   https.get(url, (response) => {
     if (response.statusCode === 200) {
